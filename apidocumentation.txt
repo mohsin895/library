@@ -1,0 +1,354 @@
+$baseUrl = https://www.test.loyel.com.bd/api
+
+
+1)Registartion:
+
+method:post
+endpont:/register
+
+ required field:name, email, password
+
+   "status": true,
+    "message": "Registration successfully. Please login your account.",
+    "data": {
+        "name": "admin",
+        "email": "admin@example.com",
+        "email_verified_at": "2025-05-06T14:54:44.000000Z",
+        "created_at": "2025-05-06T14:54:44.000000Z",
+        "updated_at": "2025-05-06T14:54:44.000000Z",
+        "id": 1
+    }
+}
+
+2) Login:
+
+method:post;
+endpont:/login
+
+ required field: email, password
+example: email:admin@example.com; password:123456789
+
+{
+    "status": true,
+    "token_type": "Bearer",
+    "token": "1|HAHjd3hOwZ8NCpoewXO1apuWhokYCO1ZamcIichUd6b71eb9",
+    "message": "Login successfully",
+    "dataInfo": {
+        "id": 1,
+        "name": "admin",
+        "email": "admin@example.com",
+        "created_at": "2025-05-06T14:54:44.000000Z"
+    }
+}
+3)BookSelf Insert:
+
+method:Post;
+endpoint: /bookshelves
+
+required field: name, location
+{
+    "status": true,
+    "message": "Data Insert Successfully.",
+    "data": {
+        "name": "eid",
+        "location": "dhaka",
+        "updated_at": "2025-05-06T15:18:20.000000Z",
+        "created_at": "2025-05-06T15:18:20.000000Z",
+        "id": 1
+    }
+}
+4) get Bookself
+
+method:get
+endpont: /bookshelves
+
+[
+    {
+        "id": 1,
+        "name": "eid",
+        "location": "dhaka",
+        "created_at": "2025-05-06T15:18:20.000000Z",
+        "updated_at": "2025-05-06T15:18:20.000000Z"
+    }
+]
+
+5) Retrieve a specific bookshelf by ID: GET /bookshelves/{id}
+{
+    "id": 2,
+    "name": "eid collesction",
+    "location": "khulna",
+    "created_at": "2025-05-06T15:24:18.000000Z",
+    "updated_at": "2025-05-06T15:24:18.000000Z"
+}
+6)  Update a Bookshelf: Send a PUT request to /bookshelves/{id} with the updated data.
+
+{
+  "name": "Updated Bookshelf Name",
+  "location": "Updated Location"
+}
+
+{
+    "status": true,
+    "message": "Data updated successfully.",
+    "data": {
+        "id": 1,
+        "name": "Updated Bookshelf Name",
+        "location": "Updated Location",
+        "created_at": "2025-05-06T15:18:20.000000Z",
+        "updated_at": "2025-05-06T15:45:42.000000Z"
+    }
+}
+7) DELETE /bookshelves/{bookshelf}: Delete a specific bookshelf by ID.
+{
+    "message": "Data deleted successfully.",
+    "error": false
+}
+
+
+
+Books (under a bookshelf)
+
+Method	Endpoint	Description
+
+
+8)GET	/bookshelves/{bookshelf}/books	List books in a bookshelf
+
+[
+    {
+        "id": 1,
+        "bookshelf_id": 5,
+        "title": "about bangladesh",
+        "author": "mohsin sikder",
+        "published_year": "2025",
+        "created_at": "2025-05-06T16:12:13.000000Z",
+        "updated_at": "2025-05-06T16:12:13.000000Z"
+    }
+]
+
+9) POST	/bookshelves/{bookshelf}/books	Add a book to a bookshelf
+Required: bookshelf_id  
+                ,title
+                ,author
+                ,published_year
+
+
+{
+    "message": "Book created successfully.",
+    "data": {
+        "title": "about bangladesh",
+        "author": "mohsin sikder",
+        "published_year": "2025",
+        "bookshelf_id": 5,
+        "updated_at": "2025-05-06T16:12:13.000000Z",
+        "created_at": "2025-05-06T16:12:13.000000Z",
+        "id": 1
+    }
+}
+10) GET	/bookshelves/{bookshelf}/books/{book}	Show specific book
+
+{
+    "id": 1,
+    "bookshelf_id": 5,
+    "title": "about bangladesh",
+    "author": "mohsin sikder",
+    "published_year": "2025",
+    "created_at": "2025-05-06T16:12:13.000000Z",
+    "updated_at": "2025-05-06T16:12:13.000000Z"
+}
+
+11) PUT	/bookshelves/{bookshelf}/books/{book}	Update a book
+Required: title ,author ,published_year
+
+
+{
+    "message": "Book updated successfully.",
+    "data": {
+        "id": 1,
+        "bookshelf_id": 5,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "published_year": 2008,
+        "created_at": "2025-05-06T16:12:13.000000Z",
+        "updated_at": "2025-05-06T16:37:21.000000Z"
+    }
+}
+12) DELETE	/bookshelves/{bookshelf}/books/{book}	Delete a book
+
+{
+    "message": "Book deleted successfully.",
+    "error": false
+}
+
+
+
+
+ Chapters (under a book)
+
+Method	Endpoint	Description
+
+13) GET	/books/{book}/chapters	List chapters in a book
+
+[
+    {
+        "id": 1,
+        "book_id": 2,
+        "title": "about bangladesh",
+        "chapter_number": 13,
+        "created_at": "2025-05-06T16:56:05.000000Z",
+        "updated_at": "2025-05-06T16:56:05.000000Z"
+    }
+]
+
+14) POST	/books/{book}/chapters	Add chapter to book
+
+required filed : ['book_id','title','chapter_number'];
+
+{
+    "message": "Chapter created successfully.",
+    "data": {
+        "id": 2,
+        "bookshelf_id": 5,
+        "title": "about bangladesh",
+        "author": "mohsin sikder",
+        "published_year": "2025",
+        "created_at": "2025-05-06T16:55:45.000000Z",
+        "updated_at": "2025-05-06T16:55:45.000000Z"
+    }
+}
+15) GET	/books/{book}/chapters/{chapter}	Show specific chapter
+{
+    "id": 1,
+    "book_id": 2,
+    "title": "about bangladesh",
+    "chapter_number": 13,
+    "created_at": "2025-05-06T16:56:05.000000Z",
+    "updated_at": "2025-05-06T16:56:05.000000Z"
+}
+
+16) PUT	/books/{book}/chapters/{chapter}	Update a chapter
+{
+    "title":"meaning Bangladesh",
+    "chapter_number":11
+}
+
+{
+    "message": "Chapter updated successfully.",
+    "data": {
+        "id": 1,
+        "book_id": 2,
+        "title": "meaning Bangladesh",
+        "chapter_number": 11,
+        "created_at": "2025-05-06T16:56:05.000000Z",
+        "updated_at": "2025-05-06T17:07:39.000000Z"
+    }
+}
+
+
+17)DELETE	/books/{book}/chapters/{chapter}	Delete a chapter
+
+{
+    "message": "Chapter deleted successfully.",
+    "error": false
+}
+
+
+Pages (under a chapter)
+
+
+
+18) GET	/chapters/{chapter}/pages	List pages in a chapter
+
+[
+    {
+        "id": 1,
+        "chapter_id": 2,
+        "page_number": 11,
+        "content": "meaning Bangladesh",
+        "created_at": "2025-05-07T00:17:52.000000Z",
+        "updated_at": "2025-05-06T18:25:07.000000Z"
+    }
+]
+
+19) POST	/chapters/{chapter}/pages	Add page to chapter
+
+{
+    "message": "Page created successfully.",
+    "data": {
+        "id": 2,
+        "book_id": 2,
+        "title": "about bangladesh",
+        "chapter_number": 13,
+        "created_at": "2025-05-06T17:08:11.000000Z",
+        "updated_at": "2025-05-06T17:08:11.000000Z"
+    }
+}
+
+20) GET	/chapters/{chapter}/pages/{page}	Show specific page
+{
+    "id": 1,
+    "chapter_id": 2,
+    "page_number": 11,
+    "content": "meaning Bangladesh",
+    "created_at": "2025-05-07T00:17:52.000000Z",
+    "updated_at": "2025-05-06T18:25:07.000000Z"
+}
+
+21) PUT	 /chapters/{chapter}/pages/{page}	Update a page
+
+{
+    "content":"meaning Bangladesh",
+    "page_number":11
+}
+
+{
+    "message": "Page updated successfully.",
+    "data": {
+        "id": 1,
+        "chapter_id": 2,
+        "page_number": 11,
+        "content": "meaning Bangladesh",
+        "created_at": "2025-05-07T00:17:52.000000Z",
+        "updated_at": "2025-05-06T18:25:07.000000Z"
+    }
+
+22)DELETE	/chapters/{chapter}/pages/{page}	Delete a page
+{
+    "message": "Page deleted successfully.",
+    "error": false
+}
+
+
+
+Additional Routes (you should add)
+Method	Endpoint	Description
+23) GET	/books/search?title=...&author=...	Search books
+
+[
+    {
+        "id": 2,
+        "bookshelf_id": 5,
+        "title": "about bangladesh",
+        "author": "mohsin sikder",
+        "published_year": "2025",
+        "created_at": "2025-05-06T16:55:45.000000Z",
+        "updated_at": "2025-05-06T16:55:45.000000Z"
+    },
+    {
+        "id": 3,
+        "bookshelf_id": 5,
+        "title": "about bangladesh",
+        "author": "mohsin sikder",
+        "published_year": "2025",
+        "created_at": "2025-05-06T16:55:47.000000Z",
+        "updated_at": "2025-05-06T16:55:47.000000Z"
+    }
+]
+
+
+24) GET	/chapters/{chapter}/content	Get full chapter content
+
+{
+    "chapter_title": "about bangladesh",
+    "full_content": "meaning Bangladesh\n\nffredgretgrgre\n\nffredgretgrgre\n\nffredgretgrgre"
+}
+
