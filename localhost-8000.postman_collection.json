@@ -1,0 +1,934 @@
+{
+	"info": {
+		"_postman_id": "49eb6830-9e8e-408b-8dbe-5a4fe35d6fce",
+		"name": "localhost:8000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17276985",
+		"_collection_link": "https://winter-spaceship-407852.postman.co/workspace/Library~92f979f6-5507-471c-a1e3-db3bf4977a05/collection/17276985-49eb6830-9e8e-408b-8dbe-5a4fe35d6fce?action=share&source=collection_link&creator=17276985"
+	},
+	"item": [
+		{
+			"name": "/api/bookshelves/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Bookshelf Name\",\r\n  \"location\": \"Updated Location\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/bookshelves",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "eid collesction",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "location",
+							"value": "khulna",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/bookshelves",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "eid",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "location",
+							"value": "dhaka",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|HAHjd3hOwZ8NCpoewXO1apuWhokYCO1ZamcIichUd6b71eb9",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/4/books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/4/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"4",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/4/books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookshelf_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "about bangladesh",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "mohsin sikder",
+							"type": "text"
+						},
+						{
+							"key": "published_year",
+							"value": "2025",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/5/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"5",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/5/books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/5/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"5",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/5/books/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/5/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"5",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/5/books/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Clean Code\",\r\n    \"author\": \"Robert C. Martin\",\r\n    \"published_year\": 2008\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/5/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"5",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/bookshelves/5/books/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bookshelves/5/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookshelves",
+						"5",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/2/chapters",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/books/2/chapters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"chapters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/2/chapters",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "about bangladesh",
+							"type": "text"
+						},
+						{
+							"key": "chapter_number",
+							"value": "13",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/books/2/chapters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"chapters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/2/chapters/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/books/2/chapters/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"chapters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/2/chapters/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"meaning Bangladesh\",\r\n    \"chapter_number\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/books/2/chapters/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"chapters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/2/chapters/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/books/2/chapters/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"chapters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/pages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/chapters/2/pages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chapters",
+						"2",
+						"pages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/pages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chapter_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "content",
+							"value": "ffredgretgrgre",
+							"type": "text"
+						},
+						{
+							"key": "page_number",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/chapters/2/pages\n\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chapters",
+						"2",
+						"pages\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/pages/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/chapters/2/pages/1\n\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chapters",
+						"2",
+						"pages",
+						"1\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/pages/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"meaning Bangladesh\",\r\n    \"page_number\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/chapters/2/pages/1\n\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chapters",
+						"2",
+						"pages",
+						"1\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/pages/2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "api/chapters/2/content",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "api/books/search?title=about bangladesh&author=mohsin sikder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|Oo4qLq6ylKGvZVa27ybcRVcZDOZqDUrUPe48pplwa6edadc3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/books/search?title=about bangladesh&author=mohsin sikder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "about bangladesh"
+						},
+						{
+							"key": "author",
+							"value": "mohsin sikder"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
